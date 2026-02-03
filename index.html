@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART PLANET MEMORY | IBONARIUM.TV</title>
+    <meta name="description" content="Візуальна пам'ять планети - інтерактивна подорож історією світового мистецтва">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- Compact Header -->
+    <header class="compact-header">
+        <h1>ART MEMORY</h1>
+        <p>IBONARIUM.TV</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Era Control -->
+        <section class="era-control">
+            <select id="eraSelect">
+                <option value="all">Всі епохи</option>
+                <option value="renaissance">Відродження (1400-1600)</option>
+                <option value="baroque">Бароко (1600-1750)</option>
+                <option value="romanticism">Романтизм (1800-1850)</option>
+                <option value="impressionism">Імпресіонізм (1860-1900)</option>
+                <option value="modern">Модернізм (1900-1950)</option>
+                <option value="contemporary">Сучасне (1950+)</option>
+            </select>
+            <select id="artistSelect">
+                <option value="">Оберіть художника...</option>
+            </select>
+            <button class="btn-random" id="randomBtn">ВИПАДКОВО</button>
+        </section>
+
+        <!-- Navigation Controls -->
+        <section class="nav-control hidden" id="navControl">
+            <button class="btn-nav" id="prevBtn">← ПОПЕРЕДНІЙ</button>
+            <span class="artwork-counter" id="artworkCounter">1 / 1</span>
+            <button class="btn-nav" id="nextBtn">НАСТУПНИЙ →</button>
+        </section>
+
+        <!-- Artwork Display -->
+        <section id="artworkSection" class="hidden">
+            <div class="artwork-container">
+                <div class="artwork-image" id="mainArtwork"></div>
+                <div class="artwork-info">
+                    <h2 id="artworkTitle"></h2>
+                    <h3 id="artworkArtist"></h3>
+                    <p class="meta"><span id="artworkYear"></span> • <span id="artworkMedium"></span></p>
+                    <p class="location" id="artworkLocation"></p>
+
+                    <!-- Extended Description -->
+                    <div class="section-block">
+                        <h4>ОПИС ТВОРУ</h4>
+                        <div class="description" id="artworkDescription"></div>
+                    </div>
+
+                    <!-- Analysis -->
+                    <div class="section-block">
+                        <h4>АНАЛІЗ ТА ІНТЕРПРЕТАЦІЯ</h4>
+                        <div class="analysis" id="artworkAnalysis"></div>
+                    </div>
+
+                    <!-- Historical Context -->
+                    <div class="section-block">
+                        <h4>ІСТОРИЧНИЙ КОНТЕКСТ</h4>
+                        <div class="context" id="historicalContext"></div>
+                    </div>
+
+                    <!-- Technique -->
+                    <div class="section-block">
+                        <h4>ТЕХНІКА ТА МАТЕРІАЛИ</h4>
+                        <div class="technique" id="techniqueInfo"></div>
+                    </div>
+
+                    <!-- Provenance -->
+                    <div class="section-block">
+                        <h4>ПОХОДЖЕННЯ ТА КОЛЕКЦІЯ</h4>
+                        <div class="provenance" id="provenanceInfo"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loader -->
+        <div id="loader" class="loader">
+            <div class="loader-dot"></div>
+            <p>ЗАВАНТАЖЕННЯ З АРХІВУ...</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
